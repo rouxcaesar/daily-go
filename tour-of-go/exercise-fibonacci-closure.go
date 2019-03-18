@@ -2,10 +2,34 @@ package main
 
 import "fmt"
 
+type Fibonacci struct {
+	previous, current int
+}
+
+func (fib *Fibonacci) IsInitial() bool {
+	return fib.previous == 0 && fib.current == 0
+}
+
+func (fib *Fibonacci) Next() int {
+	switch {
+	case fib.IsInitial():
+		fib.current = 1
+	default:
+		result := fib.previous + fib.current
+		fib.previous = fib.current
+		fib.current = result
+	}
+	return fib.current
+}
+
+
 // fibonacci is a function that returns a function that returns an int.
 
 func fibonacci() func() int {
-
+	fib := Fibonacci{}
+	return func() int {
+		return fib.Next()
+	}
 }
 
 func main() {
