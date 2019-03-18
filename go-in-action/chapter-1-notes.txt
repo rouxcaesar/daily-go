@@ -1,0 +1,23 @@
+Advantages of Go:
+	- Built for modern computers which have more CPU cores.
+	- Has built-in techniques to utilize these cores as opposed to other languages.
+	- Makes sharing code easy through tools shipped with Go that make it simple to
+		use package written by others.
+	- Built-in concurrency model.
+	- Lightning-fast compiler.
+	- Garbage collector (you don't need to manage your own memory).
+	- Simple & effective type system with a compiler that catchs type differences
+		for you.
+
+Go was built to bridge the gap between the competing worlds of rapid development (Ruby, Python) and performance (C, C++).
+
+With the built-in concurrency features, Go software will scale to use the resources available without forcing you to use special threading libraries (like other languages).
+
+Unlike other languages that have an entire dependency chain included by default (like Ruby), Go is very lightweight by default and will only look at the libraries that you direcly include (via the import keyword).
+
+Goroutines are like threads, but use less memory and require less code to use. Many goroutines execute on a single OS thread.
+
+Channels are data structures that let you send typed messages between goroutines with synchronization built-in. This lets you send data between goroutines, rather than letting the goroutines fight to use the same data (problems with shared memory access).
+
+PICK UP AT: 1.1.3 - Types are simple
+
