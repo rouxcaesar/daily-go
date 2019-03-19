@@ -1,0 +1,3 @@
+Go has a minimized set of keywords, built-in functions, and syntax, along with a comprehensive standard library that provides all the core packages needed to built real-world web apps and network-based programs.
+
+

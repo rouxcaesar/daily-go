@@ -19,5 +19,10 @@ Goroutines are like threads, but use less memory and require less code to use. M
 
 Channels are data structures that let you send typed messages between goroutines with synchronization built-in. This lets you send data between goroutines, rather than letting the goroutines fight to use the same data (problems with shared memory access).
 
-PICK UP AT: 1.1.3 - Types are simple
+Go has built-in types like int and string as well as user-defined types. A typical user-defined type in go will have typed fields to store data.
 
+Instead of inheritance (like in Ruby), Go allows developers to embed types to reuse functionality in a design pattern called composition. We build small types and embed them into larger ones.
+
+Interfaces allow you to express the behavior of a type. You don't need to declare that you're implementing an interface, you just need to write the implementation. This is known as duck typing.
+
+A Go interface typically represents just a single action, and are thus smaller than interface systems in other OOP languages.
