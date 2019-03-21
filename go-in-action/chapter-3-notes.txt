@@ -1,0 +1,26 @@
+All Go programs are organized into groups of files called packages. This gives our code teh ability to be included into other projects as smaller reusable pieces.
+
+Think of Go packages as Ruby gems! The main difference is that Ruby comes with direct access to it's standard library in any program, where as Go has the standard library separated into packages and you must include the packages you want for every program.
+
+Packages are contained in a single directory, which means that all .go files in a single directory must declare the same package name.
+
+The naming convention for packages is to use the name of the directory containing the package. Also, use concise, lowercase names. Unique names are not required, because you import the package using it's full path.
+
+The main() function is the entry point for the program.
+
+Note: In Go, a command is any executable program. This is in contrast to a package, which generally means an importable semantic unit of functionality.
+
+The import statement tells the compiler where to look on disk to find the package you want to import.
+
+Packages are found on disk based on their relative path to the directories referenced by the Go environment. For the standard library, this will be where Go is installed on your computer. For packages created by your or other Go developers, this will be inside the GOPATH which is your own personal workspace for packages.
+
+When working with packages that have the same name, we can use named imports to prevent any confusion. This is done by giving one of the packages a new name to the left of the import statement.
+
+EX:	import (
+	  "fmt"
+	  myfmt "mylib/fmt"
+	)
+
+The _ character is known as the blank identifier and has many uses within Go. It's used when you want to throw away the assignment of a value or ignore return values from a function whe you're only interested in the others.
+
+PICK UP AT init SECTION pg. 65
