@@ -4,6 +4,8 @@ Think of Go packages as Ruby gems! The main difference is that Ruby comes with d
 
 Packages are contained in a single directory, which means that all .go files in a single directory must declare the same package name.
 
+Packages are the basic unit of code organization in Go.
+
 The naming convention for packages is to use the name of the directory containing the package. Also, use concise, lowercase names. Unique names are not required, because you import the package using it's full path.
 
 The main() function is the entry point for the program.
@@ -23,4 +25,14 @@ EX:	import (
 
 The _ character is known as the blank identifier and has many uses within Go. It's used when you want to throw away the assignment of a value or ignore return values from a function whe you're only interested in the others.
 
-PICK UP AT init SECTION pg. 65
+init functions are invoked at the beginning of execution time and scheduled by the compiler to be executed prior to the main function being executed.
+
+The init functions are great for setting up packages, initializing variables, or performing any other bootstrapping needed prior to the program running.
+
+It’s a great idea to get in the habit of running go vet on your code base before you commit it to a source repository.
+
+Many Go developers configure their development environment to perform a `go fmt` on save or before committing to a code repository. --> Check with team at DO about their configuration for go fmt!
+
+Your GOPATH determines on disk where Go source code is saved, compiled, and installed.
+
+You can set your GOPATH for each different project, keeping all of your source and dependencies separate.
