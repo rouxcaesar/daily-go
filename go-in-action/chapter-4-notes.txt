@@ -1,0 +1,11 @@
+Go has three different data structures that allow you to manage collections of data: arrays, slices, and maps (hashes).
+
+An array in Go is a fixed-length data type that contains a conitguous block of elements of the same type. This is different from other languages like Ruby or JS where an array can contain elements of different types.
+
+An array is declared/initialized by specifying the type of data to be stored and the total number of elements required (array length).
+
+Ex: var array [5]int --> This declares an arry of five elements all of type int.
+
+Once an array is declared, neither the type of data being stored nor its length can be changed.
+
+ 
