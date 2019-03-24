@@ -26,7 +26,6 @@ func main() {
 	for i := 21; i > 0; i++ {
 		if isTarget(i) {
 			fmt.Println(i)
-			// break
 			return
 		}
 	}
